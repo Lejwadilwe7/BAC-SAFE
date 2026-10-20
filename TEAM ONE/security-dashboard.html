@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Security Dashboard - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="security-dashboard.html" aria-current="page">Security Dashboard</a></li>
+      <li><a href="index.html" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="Security user dashboard">
+  <section class="card" tabindex="0">
+    <h1>Active Alerts</h1>
+    <table style="width:100%; border-collapse: collapse; color:#fff;">
+      <thead>
+        <tr style="border-bottom: 2px solid #d1302a;">
+          <th>Incident ID</th>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="alerts-table-body">
+        <tr>
+          <td>#12345</td>
+          <td>STU00123</td>
+          <td>John Doe</td>
+          <td>GPS: Lat -24.65, Long 25.91</td>
+          <td>2026-10-20 10:15</td>
+          <td>Active</td>
+          <td>
+            <button class="ack-btn" aria-label="Acknowledge incident #12345">Acknowledge</button>
+            <button class="resolve-btn" aria-label="Resolve incident #12345">Resolve</button>
+          </td>
+        </tr>
+        <!-- More rows will be dynamically loaded -->
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/modules/security-dashboard.js" defer></script>
+</body>
+</html>

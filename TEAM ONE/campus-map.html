@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Campus Map - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<style>
+  #map {
+    height: 400px;
+    border-radius: 10px;
+  }
+  .leaflet-container {
+    background: #142a5c;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="campus-map.html" aria-current="page">Campus Map</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="alert-status.html">Alerts</a></li>
+      <li><a href="index.html" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="Campus Map">
+  <section class="card" tabindex="0">
+    <h1>Campus Map</h1>
+    <div id="map" role="application" aria-label="Map showing Botswana Accountancy College and your location"></div>
+    <p id="map-status" aria-live="polite" style="margin-top: 0.5rem; color: #ccc;"></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 Botswana Accountancy College - BAC SAFE Prototype | Map &copy; OpenStreetMap contributors
+  </p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="assets/js/modules/map.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

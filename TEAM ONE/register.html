@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - BAC SAFE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav role="navigation" aria-label="Primary Navigation">
+      <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+      <ul>
+        <li><a href="register.html" aria-current="page">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" aria-label="Student Registration Form">
+    <section class="card" tabindex="0">
+      <h1>Student Registration</h1>
+      <form id="register-form" novalidate>
+        <fieldset>
+          <label for="student-id">Student ID <span aria-hidden="true">*</span></label>
+          <input type="text" id="student-id" name="studentId" required maxlength="20" autocomplete="username" />
+          <div id="error-student-id" class="error-message" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset>
+          <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="full-name" name="fullName" required autocomplete="name" />
+          <div id="error-full-name" class="error-message" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset>
+          <label for="dob">Date of Birth <span aria-hidden="true">*</span></label>
+          <input type="date" id="dob" name="dob" required max="" aria-describedby="dob-desc" />
+          <div id="error-dob" class="error-message" aria-live="polite"></div>
+          <small id="dob-desc" style="color:#ccc;">Using your birthdate keeps age verification accurate.</small>
+        </fieldset>
+
+        <fieldset>
+          <label for="college-email">College Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="college-email" name="email" required autocomplete="email" placeholder="you@bac.ac.bw" />
+          <div id="error-college-email" class="error-message" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset>
+          <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" required pattern="\+267\d{7,8}" placeholder="+2677xxxxxxx" autocomplete="tel" />
+          <div id="error-phone" class="error-message" aria-live="polite"></div>
+          <small style="color:#ccc;">Include Botswana country code. Example: +26771234567</small>
+        </fieldset>
+
+        <fieldset>
+          <label for="password">Password <span aria-hidden="true">*</span></label>
+          <input type="password" id="password" name="password" required aria-describedby="password-rules" />
+          <div id="error-password" class="error-message" aria-live="polite"></div>
+          <small id="password-rules" style="color:#ccc;">
+            Minimum 8 characters, including uppercase, lowercase & a number.
+          </small>
+        </fieldset>
+
+        <fieldset>
+          <label for="confirm-password">Confirm Password <span aria-hidden="true">*</span></label>
+          <input type="password" id="confirm-password" name="confirmPassword" required />
+          <div id="error-confirm-password" class="error-message" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Emergency Contact #1 (required)</legend>
+
+          <label for="ec1-name">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="ec1-name" name="ec1Name" required />
+
+          <label for="ec1-relationship">Relationship <span aria-hidden="true">*</span></label>
+          <input type="text" id="ec1-relationship" name="ec1Relationship" required />
+
+          <label for="ec1-phone">Phone Number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="ec1-phone" name="ec1Phone" required pattern="\+267\d{7,8}" placeholder="+2677xxxxxxx" />
+          <small style="color:#ccc;">Include Botswana country code. Example: +26771234567</small>
+        </fieldset>
+
+        <fieldset>
+          <legend>Emergency Contact #2 (optional)</legend>
+
+          <label for="ec2-name">Full Name</label>
+          <input type="text" id="ec2-name" name="ec2Name" />
+
+          <label for="ec2-relationship">Relationship</label>
+          <input type="text" id="ec2-relationship" name="ec2Relationship" />
+
+          <label for="ec2-phone">Phone Number</label>
+          <input type="tel" id="ec2-phone" name="ec2Phone" pattern="\+267\d{7,8}" placeholder="+2677xxxxxxx" />
+          <small style="color:#ccc;">Include Botswana country code. Example: +26771234567</small>
+        </fieldset>
+
+        <fieldset>
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">I consent to the processing of my personal data for emergency purposes and agree to the <a href="privacy.html" target="_blank" rel="noopener noreferrer" style="color:#d1302a;">privacy policy</a>.</label>
+          <div id="error-consent" class="error-message" aria-live="polite"></div>
+        </fieldset>
+
+        <input type="submit" value="Register" aria-label="Register for BAC SAFE" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+  </footer>
+</body>
+</html>

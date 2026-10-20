@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emergency Contacts - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="campus-map.html">Campus Map</a></li>
+      <li><a href="contacts.html" aria-current="page">Contacts</a></li>
+      <li><a href="alert-status.html">Alerts</a></li>
+      <li><a href="index.html" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="Manage Emergency Contacts">
+  <section class="card" tabindex="0">
+    <h1>Manage Your Emergency Contacts</h1>
+    <form id="contacts-form" novalidate>
+      <fieldset>
+        <legend>Emergency Contact #1 (required)</legend>
+
+        <label for="ec1-name">Full Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="ec1-name" name="ec1Name" required />
+
+        <label for="ec1-relationship">Relationship <span aria-hidden="true">*</span></label>
+        <input type="text" id="ec1-relationship" name="ec1Relationship" required />
+
+        <label for="ec1-phone">Phone Number <span aria-hidden="true">*</span></label>
+        <input type="tel" id="ec1-phone" name="ec1Phone" required pattern="\+267\d{7,8}" placeholder="+2677xxxxxxx" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Emergency Contact #2 (optional)</legend>
+
+        <label for="ec2-name">Full Name</label>
+        <input type="text" id="ec2-name" name="ec2Name" />
+
+        <label for="ec2-relationship">Relationship</label>
+        <input type="text" id="ec2-relationship" name="ec2Relationship" />
+
+        <label for="ec2-phone">Phone Number</label>
+        <input type="tel" id="ec2-phone" name="ec2Phone" pattern="\+267\d{7,8}" placeholder="+2677xxxxxxx" />
+      </fieldset>
+
+      <input type="submit" value="Save Contacts" aria-label="Save emergency contacts" />
+      <div id="contacts-status" role="alert" aria-live="polite" style="margin-top:1rem;"></div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/modules/contacts.js" defer></script>
+</body>
+</html>

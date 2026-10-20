@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alert Status - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="campus-map.html">Campus Map</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="alert-status.html" aria-current="page">Alert Status</a></li>
+      <li><a href="index.html" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="Alert Incident Status">
+  <section class="card" tabindex="0">
+    <h1>Emergency Incident Status</h1>
+    <dl>
+      <dt>Incident ID:</dt>
+      <dd id="incident-id">#12345 (Demo)</dd>
+
+      <dt>Status:</dt>
+      <dd id="incident-status">ACTIVE</dd>
+
+      <dt>Timestamp:</dt>
+      <dd id="incident-timestamp">2026-10-20 10:15:00</dd>
+
+      <dt>Location Sharing:</dt>
+      <dd id="location-sharing-status">Active</dd>
+
+      <dt>Recipients Notified:</dt>
+      <dd id="recipients-list">
+        <ul>
+          <li>Campus Security - Delivery: <span style="color: #27ae60;">Success</span></li>
+          <li>Father (John Doe) - Delivery: <span style="color: #27ae60;">Success</span></li>
+          <li>Friend (Jane Smith) - Delivery: <span style="color: #d1302a;">Pending</span></li>
+        </ul>
+      </dd>
+
+      <dt>Response Updates:</dt>
+      <dd id="response-updates">
+        <ul>
+          <li>Campus Security acknowledged at 10:16</li>
+          <li>John Doe responded at 10:18</li>
+          <li>Jane Smith pending</li>
+        </ul>
+      </dd>
+    </dl>
+    <p><a href="dashboard.html" class="button-link" role="button">Back to Dashboard</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

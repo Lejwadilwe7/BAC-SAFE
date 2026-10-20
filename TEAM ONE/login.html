@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html" aria-current="page">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="User login form">
+  <section class="card" tabindex="0">
+    <h1>Student Login</h1>
+    <form id="login-form" novalidate>
+      <fieldset>
+        <label for="student-id-login">Student ID <span aria-hidden="true">*</span></label>
+        <input type="text" id="student-id-login" name="studentId" required autocomplete="username" maxlength="20" />
+        <div id="error-student-id" class="error-message" aria-live="polite"></div>
+      </fieldset>
+
+      <fieldset>
+        <label for="password-login">Password <span aria-hidden="true">*</span></label>
+        <div style="position:relative;">
+          <input type="password" id="password-login" name="password" required autocomplete="current-password" aria-describedby="show-password-desc" />
+          <button type="button" id="toggle-password" aria-label="Show or hide password" style="
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #d1302a;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+          ">Show</button>
+        </div>
+        <div id="error-password" class="error-message" aria-live="polite"></div>
+        <small id="show-password-desc" class="link-secondary" aria-live="polite"></small>
+      </fieldset>
+
+      <input type="submit" value="Login" aria-label="Login to BAC SAFE" />
+      <p><a href="forgot-password.html" class="link-secondary">Forgot password?</a></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+</footer>
+
+<script src="assets/js/modules/ui-controls.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

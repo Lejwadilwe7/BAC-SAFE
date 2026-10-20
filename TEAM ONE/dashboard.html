@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard - BAC SAFE</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="index.html" aria-label="BAC SAFE Home" class="logo">BAC SAFE</a>
+    <ul>
+      <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+      <li><a href="campus-map.html">Campus Map</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="alert-status.html">Alerts</a></li>
+      <li><a href="index.html" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" aria-label="Student Dashboard">
+  <section class="card" tabindex="0">
+    <h1 id="greeting">Hello, Student</h1>
+    <p>Welcome to your BAC SAFE dashboard.</p>
+  </section>
+
+  <section class="card" aria-label="Emergency status">
+    <h2>Safety Status</h2>
+    <button id="emergency-btn" class="btn-emergency" aria-pressed="false" aria-label="Activate emergency NOT SAFE signal">
+      NOT SAFE
+    </button>
+    <p id="status-text" aria-live="polite" style="text-align:center;font-size:1.2rem;margin-top:1rem;">
+      Status: <span id="status-indicator" style="color:#27ae60;">Safe</span>
+    </p>
+  </section>
+
+  <section class="card" aria-label="Emergency contacts summary" tabindex="0">
+    <h2>Your Emergency Contacts</h2>
+    <ul id="contacts-list" style="list-style: none; padding-left: 0;">
+      <li><strong>John Doe</strong> - Father - +26771234567</li>
+      <li><strong>Jane Smith</strong> - Friend - +26779876543</li>
+    </ul>
+  </section>
+
+  <section class="card" aria-label="Location sharing status" tabindex="0">
+    <h2>Location Status</h2>
+    <p id="location-status">Location sharing inactive.</p>
+  </section>
+
+  <section class="card" aria-label="Recent alerts" tabindex="0">
+    <h2>Recent Alerts</h2>
+    <ul id="recent-alerts">
+      <li>No active alerts.</li>
+    </ul>
+  </section>
+
+  <section class="card" aria-label="Campus Security contacts" tabindex="0">
+    <h2>Campus Security Contacts</h2>
+    <p>Phone: <a href="tel:+2673912345" style="color:#d1302a;">+267 391 2345</a></p>
+    <p>Email: <a href="mailto:security@bac.ac.bw" style="color:#d1302a;">security@bac.ac.bw</a></p>
+  </section>
+
+  <section class="card" aria-label="Wearable device demo" tabindex="0">
+    <h2>Wearable Device Simulator</h2>
+    <p>This demo simulates activating an emergency via a BLE pocket panic button (for future integration).</p>
+    <button id="wearable-btn" class="btn-emergency safe" aria-label="Simulate wearable panic button press">Simulate Panic</button>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Botswana Accountancy College - BAC SAFE Prototype</p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/modules/emergency.js" defer></script>
+<script src="assets/js/modules/wearable-demo.js" defer></script>
+</body>
+</html>

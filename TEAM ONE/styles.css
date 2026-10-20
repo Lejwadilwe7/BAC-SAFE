@@ -1,0 +1,359 @@
+/* Reset & base ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b1a38; /* Dark Navy */
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes -------------------------------------------------------- */
+
+.container {
+  max-width: 960px;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+}
+
+button,
+input[type="submit"],
+a.button-link {
+  cursor: pointer;
+  background-color: #d1302a; /* emergency red */
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+button.safe {
+  background-color: #27ae60; /* green */
+}
+
+button:focus,
+button:hover,
+a.button-link:focus,
+a.button-link:hover {
+  background-color: #b72823;
+  outline: none;
+  color: #fff;
+}
+
+button.safe:hover,
+button.safe:focus {
+  background-color: #1e8748;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d1302a;
+  outline: none;
+}
+
+label {
+  display: block;
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+  color: #eee;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+
+legend {
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.error-message {
+  color: #f44336;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.link-secondary {
+  color: #bbb;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-secondary:hover,
+.link-secondary:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Layout & common components -------------------------------------------- */
+
+header {
+  background: #031025; /* darker navy */
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0 -1px 0 #192c59;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav .logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #d1302a;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav ul li a {
+  color: #c0c9d8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #d1302a;
+  color: white;
+  outline: none;
+}
+
+main {
+  flex-grow: 1;
+  padding-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #031025;
+  color: #666;
+  user-select: none;
+  margin-top: auto;
+}
+
+/* Cards for content ----------------------------------------------------- */
+
+.card {
+  background: #142a5c;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #d1302a;
+  letter-spacing: 1px;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Buttons for emergency --------------------------------------------- */
+
+.btn-emergency {
+  background-color: #d1302a;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 900;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  box-shadow: 0 0 18px 3px #d1302a;
+  transition:
+    background-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.2s ease;
+  user-select: none;
+}
+
+.btn-emergency.safe {
+  background-color: #27ae60;
+  box-shadow: 0 0 18px 3px #27ae60;
+}
+
+.btn-emergency:hover,
+.btn-emergency:focus {
+  background-color: #b72823;
+  box-shadow: 0 0 24px 5px #b72823;
+  transform: scale(1.07);
+  outline: none;
+}
+
+/* Forms ---------------------------------------------------------------- */
+
+form {
+  max-width: 460px;
+  margin: 2rem auto 0;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+  font-size: 1rem;
+}
+
+/* Responsive typography ------------------------------------------------- */
+h1, h2, h3 {
+  scroll-margin-top: 5rem;
+}
+
+/* Titles */
+h1 {
+  font-weight: 900;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: #d1302a;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #d1302a;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+/* Accessibility & Focus ------------------------------------------------- */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #d1302a;
+  outline-offset: 2px;
+}
+
+/* Navigation mobile menu toggle - basic --------------------------------- */
+/* This can be expanded for hamburger toggle if needed */
+
+/* Small screen adjustments ---------------------------------------------- */
+
+@media (max-width: 600px) {
+  nav ul {
+    gap: 0.75rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animations ------------------------------------------------------------ */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  will-change: opacity, transform;
+}
